@@ -1,0 +1,37 @@
+{
+    "proxies": [
+        "proxy1.example.com:8080",
+        "proxy2.example.com:3128"
+    ],
+    "user_agents_file": "user_agents.txt",
+    "attack_presets": {
+        "light": {
+            "threads": 100,
+            "duration": 60,
+            "method": "http"
+        },
+        "medium": {
+            "threads": 500,
+            "duration": 300,
+            "method": "mixed"
+        },
+        "heavy": {
+            "threads": 2000,
+            "duration": 600,
+            "method": "mixed"
+        }
+    },
+    "target_ports": {
+        "http": 80,
+        "https": 443,
+        "dns": 53,
+        "mysql": 3306,
+        "ssh": 22
+    },
+    "firewall_bypass": {
+        "randomize_ips": true,
+        "use_proxies": true,
+        "rotate_user_agents": true,
+        "slowloris_interval": 10
+    }
+}
